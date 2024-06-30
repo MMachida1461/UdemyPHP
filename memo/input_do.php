@@ -11,6 +11,7 @@
 
     if($ret){
         echo '登録されました';
+        echo '<br> → <a href="index.html">トップへ戻る</a>';
     }else{
         echo '登録に失敗しました';
     }

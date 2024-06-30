@@ -11,11 +11,12 @@
 </head>
 <body>
     <h1>メモ帳</h1>
+    <p>→<a href="index.html">新しいメモ</a></p>
     <?php while($memo = $memos->fetch_assoc()): ?>
     <div>
         <h2>
             <a href="#">
-                <?php echo $memo['memo'] ?>
+                <?php echo htmlspecialchars(mb_substr($memo['memo'], 0 ,50)) ?>
             </a>
         </h2>
         <time datetime="">
